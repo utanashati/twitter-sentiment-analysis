@@ -18,7 +18,7 @@ PATH_TRAIN_FULL_2 = 'data/train_full_2.txt'
 PATH_TRAIN_FULL_3 = 'data/train_full_3.txt'
 PATH_TRAIN_FULL_4 = 'data/train_full_4.txt'
 
-PATHS_TRAIN = (PATH_TRAIN_FULL_1, PATH_TRAIN_FULL_2, PATH_TRAIN_FULL_3, PATH_TRAIN_FULL_4)
+PATHS_TRAIN = (PATH_TRAIN_FULL)
 
 ALPHABET = 'abcdefghijklmnopqrstuvwxyz0123456789' \
             '-,;.!?:\'"/\\|_@#$%^&*~`+-=<>()[]{} '
