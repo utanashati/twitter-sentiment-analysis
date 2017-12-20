@@ -15,6 +15,10 @@ PATH_TRAIN_FULL = 'data/train_full.txt'
 PATH_VALID_FULL = 'data/valid_full.txt'
 PATH_TRAIN_FULL_1 = 'data/train_full_1.txt'
 PATH_TRAIN_FULL_2 = 'data/train_full_2.txt'
+PATH_TRAIN_FULL_3 = 'data/train_full_3.txt'
+PATH_TRAIN_FULL_4 = 'data/train_full_4.txt'
+
+PATHS_TRAIN = (PATH_TRAIN_FULL_1, PATH_TRAIN_FULL_2, PATH_TRAIN_FULL_3, PATH_TRAIN_FULL_4)
 
 ALPHABET = 'abcdefghijklmnopqrstuvwxyz0123456789' \
             '-,;.!?:\'"/\\|_@#$%^&*~`+-=<>()[]{} '
@@ -25,7 +29,7 @@ MAX_WORDS_TWEET = 35
 MAX_CHARS_WORD = 16
 BATCHSIZE = 32
 
-def get_train_steps(paths=(PATH_TRAIN_FULL_1, PATH_TRAIN_FULL_2), batchsize=BATCHSIZE):
+def get_train_steps(paths=PATHS_TRAIN, batchsize=BATCHSIZE):
 	counter = 0
 	for path in paths:
 		with open(path, 'r', encoding='latin-1') as f:
@@ -170,7 +174,7 @@ def split_txt(path, n_chunks):
 					if remaining == 0:
 						break
 
-def iterate_batches(paths=(PATH_TRAIN_FULL_1, PATH_TRAIN_FULL_2), batchsize=BATCHSIZE):
+def iterate_batches(paths=PATHS_TRAIN, batchsize=BATCHSIZE):
 	inputs, targets = [], []
 	remaining = batchsize
 	for path in paths:
